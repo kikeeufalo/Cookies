@@ -1,0 +1,38 @@
+body {
+    background-color: #ff995e;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.buttonDiv {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container {
+    padding: 20px;
+}
+
+.stylesList {
+    border: 2px solid #3f324d;
+    width: 600px;
+    height: 300px;
+    background-color: #ffeacc;
+}
+
+.btn {
+    padding: 10px;
+    font-size: 16pt;
+    background-color: #3f324d;
+    border:  none;
+    border-radius: 3px;
+    color: whitesmoke;
+    margin: 30px;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
