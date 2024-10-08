@@ -22,6 +22,7 @@ body {
     height: 300px;
     background-color: #ffeacc;
     box-shadow: 5px 5px 20px #993d08;
+    text-align: center;
 }
 
 .btn {
@@ -41,4 +42,8 @@ body {
 
 .btn:hover {
     cursor: pointer;
+}
+
+li {
+    font-size: 18pt;
 }
