@@ -3,14 +3,19 @@ const delCookie = window.document.getElementById('deconstarCookie')
 const lista = window.document.getElementById('lista')
 const cookies = window.document.cookie
 
+let controle = true
+
 verCookie.addEventListener('mousedown', function() {listar()})
 
 function listar() {
     if (!cookies) {
         lista.innerHTML = `<p><strong>Nenhum cookie encontrado</strong></p>`
+    }else if (controle == false) {
+        alert('Cookies sobre a mesa')
     }else {
         lista.innerHTML += `${obtendoCookies()}`
     }
+    controle = false
 }
 
 function obtendoCookies() {
