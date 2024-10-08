@@ -6,15 +6,15 @@ const cookies = window.document.cookie
 verCookie.addEventListener('mousedown', function() {listar()})
 
 function listar() {
-    console.log(obtendoCookies())
+    lista.innerHTML = `${obtendoCookies()}`
 }
 
 function obtendoCookies() {
     const cookieArray = cookies.split('; ')// separar os cookies em pares nome=valor
-    const cookieObj = {} // converte o array em um objeto mais legivel
+    let cookieStr = '<ul>' // converte o array em um objeto mais legivel
     cookieArray.forEach(cookies => {
         const [name, value] = cookies.split('=')
-        cookieObj[decodeURIComponent(name)] = decodeURIComponent(value)
+        cookieStr += `<li><strong>${decodeURIComponent(name)}:</strong>${decodeURIComponent(value)}</li>`
     })
-    return cookieObj
+    return cookieStr
 }
