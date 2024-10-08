@@ -6,7 +6,11 @@ const cookies = window.document.cookie
 verCookie.addEventListener('mousedown', function() {listar()})
 
 function listar() {
-    lista.innerHTML += `${obtendoCookies()}`
+    if (!cookies) {
+        lista.innerHTML = `<p><strong>Nenhum cookie encontrado</strong></p>`
+    }else {
+        lista.innerHTML += `${obtendoCookies()}`
+    }
 }
 
 function obtendoCookies() {
