@@ -6,6 +6,11 @@ const cookies = window.document.cookie
 let controle = true
 
 verCookie.addEventListener('mousedown', function() {listar()})
+delCookie.addEventListener('mousedown', function() {deletar()})
+
+function deletar() {
+    // criar uma funcao para deletar o cookies
+}
 
 function listar() {
     if (!cookies) {
