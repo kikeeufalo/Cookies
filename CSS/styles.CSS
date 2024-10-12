@@ -25,7 +25,8 @@ body {
     text-align: center;
 }
 
-.btn {
+/* botões */
+.btn { 
     padding: 10px;
     font-size: 16pt;
     background-color: #3f324d;
