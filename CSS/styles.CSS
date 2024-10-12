@@ -37,6 +37,7 @@ body {
     box-shadow: 3px 3px 10px #3f324d;
 }
 
+/* quando clica */
 .btn:active {
     box-shadow: none;
 }
