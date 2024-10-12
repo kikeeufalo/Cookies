@@ -42,6 +42,7 @@ body {
     box-shadow: none;
 }
 
+/* quando o mouse passa em cima */
 .btn:hover {
     cursor: pointer;
 }
