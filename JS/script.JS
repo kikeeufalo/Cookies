@@ -24,7 +24,7 @@ function listar() {
 }
 
 function obtendoCookies() {
-    const cookieArray = cookies.split('; ')// separar os cookies em pares nome=valor
+    const cookieArray = cookies.split('; ')//constante para separar os cookies em pares nome=valor
     let cookieStr = '<ul>' // converte o array em um objeto mais legivel
     cookieArray.forEach(cookies => {
         const [name, value] = cookies.split('=')
