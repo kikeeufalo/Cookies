@@ -33,3 +33,5 @@ function obtendoCookies() {
     })
     return cookieStr
 }
+
+// incrementar uma api para coletar todos os cookies do navegador
