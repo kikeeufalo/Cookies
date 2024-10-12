@@ -12,7 +12,7 @@ function deletar() {
     // criar uma funcao para deletar o cookies
 }
 
-function listar() {
+function listar() { // mostra todos os cookies salvos na pagina
     if (!cookies) {
         lista.innerHTML = `<p><strong>Nenhum cookie encontrado</strong></p>`
     }else if (controle == false) {
@@ -25,7 +25,7 @@ function listar() {
 
 function obtendoCookies() {
     const cookieArray = cookies.split('; ')//constante para separar os cookies em pares nome=valor
-    
+
     let cookieStr = '<ul>' // converte o array em um objeto mais legivel
     cookieArray.forEach(cookies => {
         const [name, value] = cookies.split('=')
