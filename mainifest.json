@@ -24,3 +24,7 @@
       }
     }
 }
+
+// cookies: Permissão para acessar os cookies de todos os sites.
+// storage: Para armazenar os cookies localmente.
+// host_permissions: Dá permissão para monitorar cookies em todos os sites.
