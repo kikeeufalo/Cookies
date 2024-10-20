@@ -35,3 +35,4 @@ function obtendoCookies() {
 }
 
 // incrementar uma API para coletar todos os cookies do navegador não só o site atual
+//mudar os arquivos pois para criar uma extenção tem um modo padrao de se colocar os arquivos e pastas
