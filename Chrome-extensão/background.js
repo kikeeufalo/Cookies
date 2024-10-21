@@ -1,0 +1,3 @@
+cookies.getAll({}, (cookies) => {
+    chrome.
+})
