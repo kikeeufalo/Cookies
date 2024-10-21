@@ -2,16 +2,6 @@
 function getAllCookies() {
     chrome.cookies.getAll({}, function(cookies) {
         console.log("Total de cookies coletados: " + cookies.length);
-      
-      // Iterando sobre todos os cookies e exibindo suas informações
-        cookies.forEach(cookie => {
-            console.log(Nome: ${cookie.name});
-            console.log(Valor: ${cookie.value});
-            console.log(Domínio: ${cookie.domain});
-            console.log(Caminho: ${cookie.path});
-            console.log(Data de Expiração: ${cookie.expirationDate});
-            console.log(------------);
-        });
     });
 }
   
