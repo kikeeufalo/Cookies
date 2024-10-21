@@ -16,6 +16,6 @@
       "<all_urls>"
     ],
     "action": {
-      "default_popup": "popuppopup.html"
+      "default_popup": "popup/popup.html"
     }
 }
