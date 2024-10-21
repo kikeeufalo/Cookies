@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="stylesheet" href="./popup.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cookies</title>
 </head>
 <body>
-    <h1>Olá Mundo!</h1>
+    <div class="container">
+        <div class="buttonDiv">
+            <button class="btn" id="verCookie">Ver cookies</button>
+            <button class="btn" id="deletarCookie">Deletar cookies</button>
+        </div>
+        <div class="stylesList" id="lista"></div>
+    </div>
+    <script src="./JS/script.JS"></script>
 </body>
 </html>
+
+<!-- Site com uma API incrmentada para verificar todos os cookies do navegador -->
+<!-- Sera tentado colocar essa API nos arquivos internos -->
