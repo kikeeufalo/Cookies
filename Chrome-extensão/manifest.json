@@ -1,21 +1,18 @@
 {
-    "manifest_version": 3,
-    "name": "Monitor de Cookies",
-    "version": "1.0",
-    "description": "Armazena todos os cookies dos sites em um só lugar.",
-    "permissions": [
-      "cookies",
-      "storage",
-      "activeTab",
-      "scripting"
-    ],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "host_permissions": [
-      "<all_urls>"
-    ],
-    "action": {
-      "default_popup": "popup/popup.html"
-    }
+  "manifest_version": 3,
+  "name": "Cookie Manager",
+  "version": "0.1",
+  "description": "Extensão para visualizar e deletar cookies.",
+  "permissions": [
+    "cookies",
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "action": {
+    "default_popup": "./popup/popup.html",
+    "default_title": "Gerenciar Cookies"
+  }
 }
