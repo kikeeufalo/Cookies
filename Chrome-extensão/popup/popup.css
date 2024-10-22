@@ -58,5 +58,9 @@ li {
     font-size: 16pt;
     border: 2px solid #3f324d;
     margin: 3px;
-    height: auto;
+    text-align: center;
+}
+
+button {
+    justify-content: end;
 }
