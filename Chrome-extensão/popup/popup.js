@@ -1,20 +1,34 @@
-document.addEventListener('DOMContentLoaded', () => {
-    chrome.storage.local.get(null, (data) => {
-        const cookieListDiv = document.querySelector('.cookie-list');
-        cookieListDiv.innerHTML = '';
-
-        for (const url in data) {
-            const cookies = data[url];
-            const urlDiv = document.createElement('div');
-            urlDiv.innerHTML = `<h3>${url}</h3>`;
-            
-            cookies.forEach(cookie => {
-                const cookieItem = document.createElement('div');
-                cookieItem.textContent = `${cookie.name}: ${cookie.value}`;
-                urlDiv.appendChild(cookieItem);
+document.getElementById("verCookie").addEventListener("click", function () {
+    // Limpar a lista anterior
+    const cookieList = document.getElementById("lista");
+    cookieList.innerHTML = "";
+  
+    // Obter cookies para o site ativo
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+      const currentTab = tabs[0];
+  
+      chrome.cookies.getAll({ url: currentTab.url }, function (cookies) {
+        cookies.forEach((cookie) => {
+          // Criar o item da lista
+          const listItem = document.createElement("li");
+          listItem.textContent = `${cookie.name}: ${cookie.value}`;
+  
+          // Botão para deletar o cookie
+          const deleteBtn = document.createElement("button");
+          deleteBtn.textContent = "Excluir";
+          deleteBtn.addEventListener("click", function () {
+            chrome.cookies.remove({
+              url: currentTab.url,
+              name: cookie.name,
             });
-
-            cookieListDiv.appendChild(urlDiv);
-        }
+            listItem.remove(); // Remover da lista
+          });
+  
+          // Adicionar à lista
+          listItem.appendChild(deleteBtn);
+          cookieList.appendChild(listItem);
+        });
+      });
     });
-});
+  });
+  
