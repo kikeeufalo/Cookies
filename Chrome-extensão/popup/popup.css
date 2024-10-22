@@ -59,6 +59,8 @@ li {
     border: 2px solid #3f324d;
     margin: 3px;
     text-align: center;
+    max-width: 100%;
+    word-wrap: break-word;
 }
 
 button {
