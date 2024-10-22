@@ -30,5 +30,4 @@ document.getElementById("verCookie").addEventListener("click", function () {
         });
       });
     });
-  });
-  
+});
